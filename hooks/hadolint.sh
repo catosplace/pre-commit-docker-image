@@ -3,5 +3,5 @@
 set -e
 
 for file in "$@"; do
-  dojo "hadolint --ignore DL3018 ${file}"
+  dojo -i false "hadolint --ignore DL3018 ${file}"
 done
