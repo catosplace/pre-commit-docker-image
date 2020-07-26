@@ -1,8 +1,14 @@
 # This configuration file allows our pre-commit hooks to be used with pre-commit: http://pre-commit.com/
 
 - id: hadolint
-  name: hadolint
-  description: Linter for the Dockerfile
+  name: Hadolint Dockerfile Linter
+  description: Perform linting on Dockerfiles
   entry: hooks/hadolint.sh
   language: script
   files: Dockerfile
+
+- id: shellcheck
+  name: Shellcheck Bash Linter
+  description: Perform linting on bash scripts
+  entry: hooks/shellcheck.sh
+  language: script
